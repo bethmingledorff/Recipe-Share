@@ -16,6 +16,32 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Merienda+One);
+
+@font-face {
+    font-family: 'meriendabold';
+    src: font-url('meriendabold-webfont.eot');
+    src: font-url('meriendabold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('meriendabold-webfont.woff2') format('woff2'),
+         font-url('meriendabold-webfont.woff') format('woff'),
+         font-url('meriendabold-webfont.ttf') format('truetype'),
+         font-url('meriendabold-webfont.svg#meriendabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'meriendaregular';
+    src: font-url('meriendaregular-webfont.eot');
+    src: font-url('meriendaregular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('meriendaregular-webfont.woff2') format('woff2'),
+         font-url('meriendaregular-webfont.woff') format('woff'),
+         font-url('meriendaregular-webfont.ttf') format('truetype'),
+         font-url('meriendaregular-webfont.svg#meriendaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 @mixin box-shadow {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
@@ -26,7 +52,8 @@
 $red: #DB6161;
 
 body {
-	background: rgb(235, 238, 243);
+	font-family: 'meriendabold';
+	background: #f2e0a7;
 }
 
 .main_content {
@@ -44,22 +71,49 @@ body {
 }
 
 .navbar {
+	font-family: 'meriendabold';
+	background: #F4EAC9;
 	margin-bottom: 50px;
 	@include box-shadow;
 	border: none;
 	.navbar-brand {
+		font-family: 'meriendabold';
 		text-transform: uppercase;
 		letter-spacing: -1px;
 		font-weight: bold;
-		font-size: 25px;
+		font-size: 30px;
 		a {
 			color: $red;
 		}
 	}
+	h1 {
+		font-family: 'meriendaregular';
+		padding: 15px 5%;
+		margin: 0;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 1.5;
+		a {
+			color: $red;
+		}
+	}
+	h2 {
+		font-family: 'meriendaregular';
+		padding: 15px 5%;
+		margin: 0;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 1.5;
+		a {
+			color: $red;
+		}
+	}
+
 }
 
 .recipe {
 	background: white;
+	text-align: center;
 	border-radius: 5px;
 	margin-bottom: 40px;
 	@include box-shadow;
@@ -79,6 +133,20 @@ body {
 		}
 	}
 	h2 {
+		font-family: 'meriendaregular';
+				text-transform: uppercase;
+
+		padding: 15px 5%;
+		margin: 0;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 1.5;
+		a {
+			color: $red;
+		}
+	}
+	h1 {
+		font-family: 'meriendaregular';
 		padding: 15px 5%;
 		margin: 0;
 		font-size: 20px;
@@ -110,6 +178,7 @@ body {
 
 #recipe_info {
 	h1 {
+		font-family: 'Merienda One', cursive;
 		font-size: 36px;
 		font-weight: normal;
 		color: $red;
