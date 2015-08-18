@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-
+	belongs_to :user
 	has_many :ingredients
 	has_many :directions
 
@@ -12,6 +12,6 @@ class Recipe < ActiveRecord::Base
 
   validates :title, :description, :image, presence: true
 
-	has_attached_file :image, styles: { :medium => "350x200#" }
+	has_attached_file :image, styles: { :medium => "350x350#" }
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
